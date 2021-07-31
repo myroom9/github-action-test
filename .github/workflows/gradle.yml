@@ -57,8 +57,10 @@ jobs:
     # Deploy
     - name: Deploy
       env:
-        AWS_ACCESS_KEY_ID: ${{'{{' }} secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{'{{' }} secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_ACCESS_KEY_ID: AKIAWUPSDUHNZRMYVSGY
+        # AWS_ACCESS_KEY_ID: ${{'{{' }} secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: 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
+        # AWS_SECRET_ACCESS_KEY: ${{'{{' }} secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
         aws deploy create-deployment \
         --application-name action-test \
@@ -66,3 +68,5 @@ jobs:
         --file-exists-behavior OVERWRITE \
         --s3-location bucket=springboot-intro-build,bundleType=zip,key=springboot-intro-build.zip \
         --region ap-northeast-2
+
+  # 
