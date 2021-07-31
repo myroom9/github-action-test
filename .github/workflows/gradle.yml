@@ -63,8 +63,8 @@ jobs:
         # AWS_SECRET_ACCESS_KEY: ${{'{{' }} secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
         aws deploy create-deployment \
-        --application-name action-test \
-        --deployment-group-name springboot-intro-deploy-group \
+        --application-name github-action-test \
+        --deployment-group-name action-test \
         --file-exists-behavior OVERWRITE \
         --s3-location bucket=springboot-intro-build,bundleType=zip,key=springboot-intro-build.zip \
         --region ap-northeast-2
