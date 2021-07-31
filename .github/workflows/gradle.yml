@@ -64,7 +64,7 @@ jobs:
       run: |
         aws deploy create-deployment \
         --application-name github-action-test \
-        --deployment-group-name action-test \
+        --deployment-group-name test \
         --file-exists-behavior OVERWRITE \
         --s3-location bucket=springboot-intro-build,bundleType=zip,key=springboot-intro-build.zip \
         --region ap-northeast-2
